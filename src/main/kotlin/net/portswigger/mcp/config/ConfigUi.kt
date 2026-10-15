@@ -157,9 +157,16 @@ class ConfigUi(private val config: McpConfig, private val providers: List<Provid
         val leftPanel = JPanel(GridBagLayout())
 
         val headerBox = createVerticalBox().apply {
-            add(JLabel("Burp MCP Server").apply {
+            // UNRESTRICTED FORK: fork branding + attribution
+            add(JLabel("Burp Unrestricted MCP").apply {
                 font = Design.Typography.headlineMedium
                 foreground = Design.Colors.onSurface
+                alignmentX = CENTER_ALIGNMENT
+            })
+            add(createVerticalStrut(Design.Spacing.SM))
+            add(JLabel("Tweaked by Raman_MG").apply {
+                font = Design.Typography.labelMedium
+                foreground = Design.Colors.onSurfaceVariant
                 alignmentX = CENTER_ALIGNMENT
             })
             add(createVerticalStrut(Design.Spacing.MD))

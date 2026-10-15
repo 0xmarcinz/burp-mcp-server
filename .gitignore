@@ -37,3 +37,11 @@ bin/
 
 ### Mac OS ###
 .DS_Store
+
+### Fork: local-only, never publish ###
+_UPLOAD_GUIDE.md
+
+# Built jars are distributed as GitHub Release assets, not committed, so the
+# clone stays small. Build output lands here locally and is uploaded to the
+# release for the matching tag.
+release/

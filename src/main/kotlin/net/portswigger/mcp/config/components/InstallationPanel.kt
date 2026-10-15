@@ -128,7 +128,8 @@ class InstallationPanel(
             add(
                 Anchor(
                     text = "Manual install steps",
-                    url = "https://github.com/PortSwigger/mcp-server?tab=readme-ov-file#manual-installations"
+                    // UNRESTRICTED FORK: point at this fork's README, not upstream's
+                    url = "https://github.com/RamanMG/Burp-MCP-Unrestricted?tab=readme-ov-file#manual-installation"
                 )
             )
         }
