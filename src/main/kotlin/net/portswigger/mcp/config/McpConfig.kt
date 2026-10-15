@@ -12,14 +12,14 @@ private const val TARGET_SEPARATOR = "\n"
 class McpConfig(storage: PersistedObject, private val logging: Logging) {
 
     var enabled by storage.boolean(true)
-    // UNRESTRICTED FORK: config-editing on by default
-    var configEditingTooling by storage.boolean(true)
+    // Restored to upstream PortSwigger defaults (was true in the unrestricted fork).
+    var configEditingTooling by storage.boolean(false)
     var host by storage.string("127.0.0.1")
     var port by storage.int(9876)
-    // UNRESTRICTED FORK: no per-request approval dialogs by default
-    var requireHttpRequestApproval by storage.boolean(false)
-    // UNRESTRICTED FORK: no per-data-access approval dialogs by default
-    var requireDataAccessApproval by storage.boolean(false)
+    // Restored to upstream PortSwigger defaults (was false in the unrestricted fork).
+    var requireHttpRequestApproval by storage.boolean(true)
+    // Restored to upstream PortSwigger defaults (was false in the unrestricted fork).
+    var requireDataAccessApproval by storage.boolean(true)
 
     private var _alwaysAllowHttpHistory by storage.boolean(false)
     var alwaysAllowHttpHistory: Boolean
